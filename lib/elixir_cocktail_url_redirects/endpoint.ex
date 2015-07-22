@@ -32,5 +32,6 @@ defmodule ElixirCocktailUrlRedirects.Endpoint do
     key: "_elixir_cocktail_url_redirects_key",
     signing_salt: "khQmgDZH"
 
+  plug ElixirCocktailUrlRedirects.RedirectsPlug, %{"/" => "/page"}
   plug :router, ElixirCocktailUrlRedirects.Router
 end
