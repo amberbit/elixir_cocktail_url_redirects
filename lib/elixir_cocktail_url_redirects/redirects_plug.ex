@@ -12,6 +12,7 @@ defmodule ElixirCocktailUrlRedirects.RedirectsPlug do
 
   defp do_redirect(conn, to) do
     conn
+      |> put_status(301)
       |> Phoenix.Controller.redirect(to: to)
       |> halt
   end
